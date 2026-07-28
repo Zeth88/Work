@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend Day, Usha 🤍</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- floating nav dots -->
+<div class="nav-dots" id="navDots">
+  <button class="dot active" data-target="page0" aria-label="Page 1"></button>
+  <button class="dot" data-target="page1" aria-label="Page 2"></button>
+  <button class="dot" data-target="page2" aria-label="Page 3"></button>
+  <button class="dot" data-target="page3" aria-label="Page 4"></button>
+  <button class="dot" data-target="page4" aria-label="Page 5"></button>
+</div>
+
+<!-- ================= PAGE 0 : LANDING ================= -->
+<section id="page0" class="page landing">
+  <div class="grain"></div>
+  <div class="landing-inner">
+    <p class="eyebrow" id="landingEyebrow">for someone special</p>
+    <h1 class="landing-title" id="landingTitle">Hellooo Usha babyy</h1>
+    <p class="landing-sub" id="landingSub">i made you something. scroll down when you're ready 🤍</p>
+    <button class="scroll-cue" id="scrollCue" aria-label="Scroll to next section">
+      <span></span>
+    </button>
+  </div>
+</section>
+
+<!-- ================= PAGE 1 : ENVELOPE ================= -->
+<section id="page1" class="page envelope-page">
+  <p class="section-label">tap the envelope</p>
+
+  <div class="envelope-stage" id="envelopeStage">
+
+    <!-- scatter contents (hidden behind envelope until opened) -->
+    <div class="scatter-field" id="scatterField">
+      <div class="tulip t1">🌷</div>
+      <div class="tulip t2">🌷</div>
+      <div class="tulip t3">🌷</div>
+      <div class="tulip t4">🌷</div>
+      <div class="duck-piece d1">🐤</div>
+      <div class="duck-piece d2">🐥</div>
+      <div class="sparkle s1">✨</div>
+      <div class="sparkle s2">✨</div>
+      <div class="sparkle s3">✨</div>
+    </div>
+
+    <!-- the letter, revealed after tear -->
+    <div class="letter" id="letter">
+      <div class="letter-duck">🐤</div>
+      <h3>a little note</h3>
+      <p id="letterText">
+        every day feels a little softer because you're in it. happy girlfriend day, my love —
+        here's a small envelope of everything i don't say enough. keep scrolling, there's more waiting for you. 🤍
+      </p>
+      <div class="letter-tulips">🌷 🌷 🌷</div>
+    </div>
+
+    <!-- envelope itself -->
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-flap-left"></div>
+      <div class="env-flap-right"></div>
+      <div class="env-flap-top" id="envFlapTop"></div>
+      <div class="env-seal" id="envSeal">💌</div>
+    </div>
+  </div>
+
+  <p class="hint" id="envelopeHint">click to open</p>
+</section>
+
+<!-- ================= PAGE 2 : MEMORY BOX ================= -->
+<section id="page2" class="page memory-page">
+  <div class="memory-card">
+    <p class="section-label">for you to fill in</p>
+    <h2>leave a memory in the box</h2>
+
+    <!-- 📷 image loads from IMG-20250916-WA0303.jpg, sitting right next to index.html in the same folder -->
+    <div class="memory-photo-wrap" id="memoryPhotoWrap">
+      <img src="IMG-20250916-WA0303.jpg" alt="a memory of us" id="memoryPhoto">
+    </div>
+
+    <p class="memory-sub">no word limit, no filter needed. write whatever's on your mind — a memory, a thought, a rant, anything. it comes straight to me.</p>
+
+    <form id="memoryForm">
+      <textarea id="memoryText" name="message" placeholder="dear future me / dear him / dear whoever's reading this..." required></textarea>
+      <input type="hidden" name="_subject" value="a new memory from Usha 🤍">
+      <button type="submit" id="memorySubmit">put it in the box</button>
+    </form>
+    <p class="memory-status" id="memoryStatus"></p>
+  </div>
+</section>
+
+<!-- ================= PAGE 3 : 90's PAGE ================= -->
+<section id="page3" class="page retro-page">
+  <div class="retro-marquee-wrap">
+    <div class="retro-marquee"><span>✧ girlfriend day special ✧ girlfriend day special ✧ girlfriend day special ✧ girlfriend day special ✧</span></div>
+  </div>
+
+  <div class="retro-window">
+    <div class="retro-titlebar">
+      <span>🤍 a-letter-from-him.txt</span>
+      <div class="retro-btns"><span></span><span></span><span></span></div>
+    </div>
+    <div class="retro-body">
+      <div class="retro-stars">✦ ✦ ✦</div>
+      <h2 class="retro-heading">from my side of the screen</h2>
+      <!-- ✏️ EDIT THE PARAGRAPH BELOW WITH YOUR OWN WORDS -->
+      <p class="retro-text" contenteditable="true" spellcheck="false" id="retroEditable">
+        Hello Usha, my love. I just wanted to take a moment to tell you how much you mean to me.
+        Every day with you is a new adventure, and I cherish and remember every memory we create together.
+        You light up my world in ways I never thought possible.
+        Thank you for being my rock, my confidant, and my best friend.
+        I love you more than words can express, and I look forward to all the beautiful moments we have yet to share.
+        Not much Just few words for you.<br>
+        Forever yours, <br>
+        Yours turtle.
+      </p>
+      <div class="retro-gifs">
+        <span>🌟</span><span>💫</span><span>🐤</span><span>🌷</span><span>💫</span><span>🌟</span>
+      </div>
+      <p class="retro-footer">est. whenever we started · best viewed with your whole heart · 1998-coded, forever-loved</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAGE 4 : DUCK BANNER FINALE ================= -->
+<section id="page4" class="page duck-page">
+  <div class="duck-pin" id="duckPin">
+    <div class="sky"></div>
+    <div class="ground"></div>
+
+    <div class="banner-team" id="bannerTeam">
+      <div class="duck duck-front">🐤</div>
+      <div class="banner-pole banner-pole-left"></div>
+      <div class="banner-cloth">
+        <span>Happy Girlfriend Day</span>
+        <span class="banner-sub">my love 🤍</span>
+      </div>
+      <div class="banner-pole banner-pole-right"></div>
+      <div class="duck duck-back">🐤</div>
+    </div>
+
+    <div class="tulip-row">
+      <span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span>
+    </div>
+  </div>
+  <p class="finale-caption" id="finaleCaption">happy girlfriend day, usha. thank you for being mine. 🤍</p>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
