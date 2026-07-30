@@ -232,17 +232,18 @@ duckTimeline
 
 /* ----------------------------------------------------------
    "there's more — keep scrolling" hint: independent of the ducks.
-   Shows the moment you enter this section, fades away within
-   the first bit of scrolling, regardless of when the ducks arrive.
+   Shows the moment you enter this section and stays up through
+   the blank scroll stretch, fading out right as the ducks arrive
+   (the ducks finish walking in at roughly 100% of this range).
    ---------------------------------------------------------- */
 gsap.timeline({
   scrollTrigger: {
     trigger: '#page4',
     start: 'top top',
-    end: '+=40%',
+    end: '+=95%',
     scrub: 0.6
   }
 })
   .to(scrollMoreNote, { opacity: 1, duration: 0.2 })   // appears right at the start of the section
-  .to({}, { duration: 0.3 })                            // holds briefly
-  .to(scrollMoreNote, { opacity: 0, duration: 0.2 });   // fades away early, before the ducks show up
+  .to({}, { duration: 0.3 })                            // holds through the blank scroll stretch
+  .to(scrollMoreNote, { opacity: 0, duration: 0.2 });   // fades out right as the ducks arrive
