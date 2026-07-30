@@ -1,13 +1,13 @@
 /* ============ tokens ============ */
 :root{
-  --cream:#f8fee3;
-  --pink:#FFD3E0;
-  --pink-deep:#F79CB4;
-  --tulip:#E8536B;
-  --duck:#FFCB3D;
-  --sage:#8FB79A;
-  --plum:#4A3547;
-  --plum-soft:#7A6472;
+  --cream:#F8F1E4;
+  --pink:#E9D6B8;
+  --pink-deep:#A9764F;
+  --tulip:#7C4A24;
+  --duck:#D9A441;
+  --sage:#7C6A52;
+  --plum:#3B2A1E;
+  --plum-soft:#7A6152;
 }
 
 *{ box-sizing:border-box; }
@@ -82,7 +82,7 @@ h1,h2,h3{
 .grain{
   position:absolute; inset:0;
   pointer-events:none;
-  background-image:radial-gradient(rgba(74,53,71,.04) 1px, transparent 1px);
+  background-image:radial-gradient(rgba(59,42,30,.04) 1px, transparent 1px);
   background-size:3px 3px;
   opacity:.5;
 }
@@ -145,13 +145,13 @@ h1,h2,h3{
 }
 .env-back{
   position:absolute; inset:0;
-  background:linear-gradient(135deg,#fff, #FFE7EF);
+  background:linear-gradient(135deg,#fff, #EFE0C8);
   border-radius:10px;
-  box-shadow:0 20px 40px -12px rgba(74,53,71,.35);
+  box-shadow:0 20px 40px -12px rgba(59,42,30,.35);
 }
 .env-flap-left, .env-flap-right{
   position:absolute; top:0; bottom:0; width:50%;
-  background:linear-gradient(135deg,#FFE1EC,#FFC9DB);
+  background:linear-gradient(135deg,#F0DFC2,#E3C9A0);
 }
 .env-flap-left{
   left:0;
@@ -200,7 +200,7 @@ h1,h2,h3{
   background:#fffdf8;
   border-radius:14px;
   padding:2rem 1.7rem 1.6rem;
-  box-shadow:0 30px 60px -20px rgba(74,53,71,.4);
+  box-shadow:0 30px 60px -20px rgba(59,42,30,.4);
   text-align:center;
   z-index:10;
 }
@@ -234,7 +234,7 @@ h1,h2,h3{
   background:#fff;
   border-radius:22px;
   padding:2.6rem 2.2rem;
-  box-shadow:0 30px 60px -30px rgba(74,53,71,.35);
+  box-shadow:0 30px 60px -30px rgba(59,42,30,.35);
   text-align:center;
 }
 .memory-card h2{
@@ -248,8 +248,8 @@ h1,h2,h3{
   margin:0 auto 1.4rem;
   border-radius:16px;
   overflow:hidden;
-  background:#FFE7EF;
-  box-shadow:0 16px 30px -16px rgba(74,53,71,.3);
+  background:#EFE0C8;
+  box-shadow:0 16px 30px -16px rgba(59,42,30,.3);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -279,13 +279,13 @@ h1,h2,h3{
   width:100%;
   min-height:160px;
   resize:vertical;
-  border:2px solid #FBD7E2;
+  border:2px solid #E7D3B4;
   border-radius:14px;
   padding:1rem;
   font-family:'Quicksand', sans-serif;
   font-size:1rem;
   color:var(--plum);
-  background:#FFFBF7;
+  background:#FFFBF2;
   outline:none;
   transition:border-color .25s;
 }
@@ -324,15 +324,15 @@ h1,h2,h3{
   width:100%;
   max-width:var(--retro-width);
   overflow:hidden;
-  background:#ff2e88;
-  border:3px solid #fff;
+  background:#6B4226;
+  border:3px solid var(--cream);
   margin-bottom:1.4rem;
 }
 .retro-marquee span{
   display:inline-block;
   white-space:nowrap;
   padding:.4rem 0;
-  color:#fffb00;
+  color:var(--duck);
   font-family:'Fredoka', sans-serif;
   font-weight:600;
   font-size:.95rem;
@@ -345,12 +345,12 @@ h1,h2,h3{
 .retro-window{
   width:100%;
   max-width:var(--retro-width);
-  background:#c9c9e8;
-  border:3px solid #fff;
-  box-shadow:6px 6px 0 #000;
+  background:#E3CBA0;
+  border:3px solid var(--cream);
+  box-shadow:6px 6px 0 var(--plum);
 }
 .retro-titlebar{
-  background:linear-gradient(90deg,#000080,#1084d0);
+  background:linear-gradient(90deg,var(--plum),var(--pink-deep));
   color:#fff;
   font-size:.85rem;
   font-family:'Quicksand',sans-serif;
@@ -363,35 +363,35 @@ h1,h2,h3{
 .retro-btns{ display:flex; gap:5px; }
 .retro-btns span{
   width:12px; height:12px;
-  background:#c9c9e8;
-  border:1px solid #000;
+  background:var(--pink);
+  border:1px solid var(--plum);
   display:inline-block;
 }
 .retro-body{
-  background:#fffdf0;
+  background:var(--cream);
   padding:1.8rem 1.6rem;
   text-align:center;
 }
-.retro-stars{ color:#ff2e88; letter-spacing:.5em; margin-bottom:.6rem; }
+.retro-stars{ color:var(--tulip); letter-spacing:.5em; margin-bottom:.6rem; }
 .retro-heading{
   font-size:1.6rem;
-  color:#8000ff;
-  text-shadow:2px 2px 0 #ffd400;
+  color:var(--plum);
+  text-shadow:2px 2px 0 var(--duck);
   margin-bottom:1rem;
 }
 .retro-text{
   font-family:'Quicksand', sans-serif;
   font-size:1.05rem;
   line-height:1.7;
-  color:#2a1a4a;
-  background:#fff;
-  border:2px dashed #ff2e88;
+  color:var(--plum);
+  background:#FFFCF4;
+  border:2px dashed var(--tulip);
   border-radius:6px;
   padding:1.2rem;
   outline:none;
   text-align:left;
 }
-.retro-text:focus{ background:#fffef5; }
+.retro-text:focus{ background:#FFF8EA; }
 .retro-gifs{
   margin-top:1.3rem;
   font-size:1.5rem;
@@ -404,7 +404,7 @@ h1,h2,h3{
 .retro-footer{
   margin-top:1.4rem;
   font-size:.72rem;
-  color:#5a4a7a;
+  color:var(--plum-soft);
 }
 
 /* ============ PAGE 4 duck banner finale ============ */
@@ -426,14 +426,29 @@ h1,h2,h3{
 }
 .sky{
   position:absolute; inset:0;
-  background:linear-gradient(180deg,#BFE3FF 0%, #FDEFD8 70%, #FCE3C9 100%);
+  background:linear-gradient(180deg,#E9D9BE 0%, #F3E6CB 70%, #E9D2AC 100%);
 }
 .ground{
   position:absolute;
   left:0; right:0; bottom:0;
   height:22%;
-  background:linear-gradient(180deg,#B7D9A0,#8FB79A);
-  border-top:4px solid #7CA986;
+  background:linear-gradient(180deg,#B79878,#8C6B4F);
+  border-top:4px solid #6E4F35;
+}
+.scroll-more-note{
+  position:absolute;
+  top:9vh;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'Caveat', cursive;
+  font-size:1.3rem;
+  color:var(--plum-soft);
+  background:rgba(248,241,228,.7);
+  padding:.4rem 1.2rem;
+  border-radius:30px;
+  opacity:0;
+  z-index:6;
+  white-space:nowrap;
 }
 .banner-team{
   position:absolute;
@@ -447,7 +462,7 @@ h1,h2,h3{
 .duck{ font-size:3rem; filter:drop-shadow(0 6px 6px rgba(0,0,0,.15)); }
 .banner-pole{ width:5px; height:60px; background:#B08B5C; border-radius:3px; }
 .banner-cloth{
-  background:#fc96c2;
+  background:var(--pink);
   border:3px solid var(--tulip);
   border-radius:10px;
   padding:.7rem 1.4rem;
@@ -487,7 +502,7 @@ h1,h2,h3{
   font-family:'Caveat', cursive;
   font-size:1.5rem;
   color:var(--plum);
-  background:rgba(255, 154, 218, 0.85);
+  background:rgba(169, 118, 79, 0.85);
   padding:.5rem 1.4rem;
   border-radius:30px;
   z-index:5;
@@ -524,6 +539,7 @@ h1,h2,h3{
   .duck{ font-size:2.2rem; }
   .tulip-row{ font-size:1.3rem; }
   .finale-caption{ font-size:1.15rem; padding:.5rem 1rem; max-width:88vw; text-align:center; }
+  .scroll-more-note{ font-size:1.05rem; padding:.35rem 1rem; top:7vh; }
 }
 
 /* reduced motion */

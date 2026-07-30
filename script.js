@@ -181,6 +181,7 @@ memoryForm.addEventListener('submit', async (e) => {
    ============================================================ */
 const bannerTeam = document.getElementById('bannerTeam');
 const finaleCaption = document.getElementById('finaleCaption');
+const scrollMoreNote = document.getElementById('scrollMoreNote');
 const ducks = document.querySelectorAll('.duck-page .duck');
 const tulipRow = document.querySelectorAll('.tulip-row span');
 
@@ -221,7 +222,9 @@ const duckTimeline = gsap.timeline({
 
 duckTimeline
   .to(bannerTeam, { x: '0vw', duration: 0.35, ease: 'power1.out' })      // walk in from the left, to center
+  .to(scrollMoreNote, { opacity: 1, duration: 0.1 }, '-=0.15')            // "there's more" hint appears as they arrive
   .to(finaleCaption, { opacity: 1, duration: 0.15 }, '-=0.1')             // they arrive, looking at the screen
-  .to({}, { duration: 0.3 })                                              // wait here — this is the moment
+  .to({}, { duration: 0.2 })                                              // wait here — this is the moment
+  .to(scrollMoreNote, { opacity: 0, duration: 0.1 })                      // hint fades before they leave
   .to(bannerTeam, { x: '150vw', duration: 0.35, ease: 'power1.in' });     // continue on and walk off to the right
   // the caption is never faded out — it stays as the last thing on screen
