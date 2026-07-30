@@ -107,14 +107,17 @@ function openEnvelope() {
     }, '-=0.55');
   });
 
-  // 5. the letter itself unfolds front and center, ducks and tulips staying put beside it
+  // 5. wait for the baby ducks, stars and tulips to fully settle first
+  tl.to({}, { duration: .35 });
+
+  // 6. only then does the letter fade in, front and center — the note becomes visible
   tl.to(letter, {
     opacity: 1,
     scale: 1,
     rotate: 0,
     duration: .8,
     ease: 'back.out(1.4)'
-  }, '-=0.5');
+  });
 }
 
 envelope.addEventListener('click', openEnvelope);
